@@ -16,14 +16,9 @@ import { execute, subscribe } from 'graphql';
 var app = module.exports = loopback();
 // export default app as loopback()
 
-import typeDefs from './graphql/schema';
-import resolvers from './graphql/resolvers';
+// import typeDefs from './middleware/graphql/schema';
+// import resolvers from './middleware/graphql/resolvers';
 
-
-const schema = makeExecutableSchema({
-  typeDefs,
-  resolvers,
-});
 // const schema = require('./graphql/schema');
 
 const test = require('./middleware/test');
@@ -65,6 +60,18 @@ app.use('/graphql', bodyParser.json(),
     },
   })),
 );
+
+// const schema = makeExecutableSchema({
+//   typeDefs,
+//   resolvers,
+// });
+
+const schema = require('./middleware/graphql/schema');
+
+// app.use('/graphql', expressGraphQL({
+//   schema,
+//   graphiql: true
+// }));
 
 app.use('/graphiql', graphiqlExpress({
   endpointURL: GRAPHQL_PATH,

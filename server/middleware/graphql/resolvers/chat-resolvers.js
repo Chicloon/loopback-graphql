@@ -2,7 +2,7 @@
 // import Message from '../../models/Message';
 // import app from '../../server';
 // import { pubsub } from '../pubsub';
-const app = require('../../server');
+const app = require('../../../server');
 
 // const MESSAGE_ADDED = 'messageAdded';
 
