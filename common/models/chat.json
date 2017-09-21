@@ -13,7 +13,7 @@
     },
     "validations": [],
     "relations": {
-        "members": {
+        "users": {
             "type": "hasMany",
             "model": "User",
             "foreignKey": "userId",

@@ -8,6 +8,11 @@ module.exports = {
 
     app.models.Chat.find()
       .then(res => { console.log(res); });
+
+
+    // app.models.User.create({ email: 'user@example.com', password: 'user' }, function (err, userInstance) {
+    //   console.log(userInstance);
+    // });
     app.models.User.find()
       .then(res => { console.log(res); });
     // app.models.Contacts.count((error, count) => {
